@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>efelex.com.tr</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+        
+        body { background-color: #020617; }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-300 font-sans selection:bg-cyan-500/30 overflow-x-hidden">
+
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-[80px] opacity-20 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-cyan-600 rounded-full mix-blend-multiply filter blur-[80px] opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-[80px] opacity-20 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <main class="relative z-10 max-w-6xl mx-auto px-6 py-20">
+        
+        <section class="text-center mb-32">
+            <div class="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wider text-cyan-400 uppercase bg-cyan-400/10 rounded-full border border-cyan-400/20">
+                efelex.com.tr
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-white mb-6">
+                EFELEX<span class="text-cyan-500">.</span>
+            </h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Yaratıcı kodlama, sistem yönetimi ve modern web teknolojileri üzerine projeler geliştiriyorum.
+            </p>
+            <div class="mt-10 flex gap-4 justify-center">
+                <a href="#yapabildiklerim" class="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-cyan-400 transition-colors">Yapabildiklerim</a>
+                <a href="https://gunslol.efelex.com.tr" class="px-8 py-3 glass font-bold rounded-full hover:bg-white/10 transition-colors">İletişime Geç</a>
+            </div>
+        </section>
+
+        <section class="mb-32">
+            <h2 class="text-2xl font-bold text-white mb-10 text-center uppercase tracking-widest">Kullandığım Teknolojiler</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-6 py-2 glass rounded-xl border border-white/5 hover:border-cyan-500/50 transition-all cursor-default">Python</span>
+                <span class="px-6 py-2 glass rounded-xl border border-white/5 hover:border-orange-500/50 transition-all cursor-default">HTML & CSS</span>
+                <span class="px-6 py-2 glass rounded-xl border border-white/5 hover:border-blue-500/50 transition-all cursor-default">Next.js</span>
+                <span class="px-6 py-2 glass rounded-xl border border-white/5 hover:border-green-500/50 transition-all cursor-default">Windows Server</span>
+            </div>
+        </section>
+
+        <section id="yapabildiklerim" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="group relative p-8 glass rounded-3xl overflow-hidden hover:bg-white/[0.05] transition-all">
+                <div class="absolute top-0 right-0 p-6 text-4xl opacity-10 group-hover:opacity-100 transition-opacity">01</div>
+                <h3 class="text-2xl font-bold text-white mb-3">Discord Bot Sistemleri</h3>
+                <p class="text-slate-400 mb-6">Gelişmiş seviye sistemi, rol yönetimi ve topluluk otomasyonları içeren özel Python botları.</p>
+                <div class="flex gap-3 text-xs font-mono text-cyan-400">
+                    <span>#python</span> <span>#discord.py</span>
+                </div>
+            </div>
+
+            <div class="group relative p-8 glass rounded-3xl overflow-hidden hover:bg-white/[0.05] transition-all">
+                <div class="absolute top-0 right-0 p-6 text-4xl opacity-10 group-hover:opacity-100 transition-opacity">02</div>
+                <h3 class="text-2xl font-bold text-white mb-3">Sunucu Yönetimi</h3>
+                <p class="text-slate-400 mb-6">Minecraft sunucusu kurabilir, Website hosting sağlayıcılığı yapabilirim.</p>
+                <div class="flex gap-3 text-xs font-mono text-purple-400">
+                    <span>#website</span> <span>#cloudflare</span> <span>#minecraft</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-10 text-center border-t border-white/5">
+        <p class="text-sm text-slate-500">© 2026 efelex. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
